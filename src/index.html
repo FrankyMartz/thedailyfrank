@@ -151,12 +151,14 @@
       const tbl = document.getElementsByClassName('title');
       if (tbl && tbl.length == 1){
         tbl[0].onclick = function(evt) {
-          dude = String(window.getComputedStyle(this, ':after').content).replace(/\s/g, '')
-          document.location.href = `mailto:${dude}?Subject=Hi%20Franky`
+          let theDude = String(window.getComputedStyle(this, ':after').content).replace(/[\s,\"]/g, '')
+          const legalDrinkingAge = 21;
+          if (theDude.length != legalDrinkingAge) return;
+          document.location.href = `mailto:${theDude}?Subject=Hi%20Franky`
           // Copy Email to Clipboard
           const beer = document.createElement('textarea');
-          beer.value = dude;
-          beer.textContent = dude;
+          beer.value = theDude;
+          beer.textContent = theDude;
           beer.style.position = 'fixed';
           beer.style.opacity = 0;
           document.body.appendChild(beer);
@@ -171,13 +173,16 @@
       🤫 Shushhh... little secrets.
 
       Q: Why all the trouble with email address?
-      A: I wanted to make it hard for crawlers/spammers to grok me. #la-résistance
+      A: I wanted to make it hard for crawlers/spammers to grok me. Also,
+      thought it'd be a fun exercise in obfuscation. #la-résistance #riddler
 
       Q: Are you open for Job Opportunities?
-      A: Ooo! Why thank you, good person. Yes, I'm currently open.
+      A: Ooo! Why yes, thank you for inquiring good person. I'm currently open
+      for conversations.
 
       Q: What is "The Frank Life"?
-      A: A subtle nod to honesty, obsession, and Frank Thomas; but mostly coffee & cookies.
+      A: A subtle nod to honesty, obsession, and Frank Thomas; but mostly
+      coffee & cookies.
     -->
   </body>
 </html>
