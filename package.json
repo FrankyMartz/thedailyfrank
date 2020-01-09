@@ -1,0 +1,29 @@
+{
+  "name": "thedailyfrank",
+  "version": "0.1.0",
+  "description": "The Crazy Rambles of a FrankyMartz Creature in Web Source",
+  "author": "Franky Martinez <hi@TheDailyFrank.life>",
+  "homepage": "https://www.TheDailyFrank.life",
+  "private": true,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrankyMartz/thedailyfrank.git"
+  },
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/FrankyMartz/thedailyfrank/issues"
+  },
+  "keywords": [
+    "blog",
+    "tech",
+    "design",
+    "motion",
+    "engineer",
+    "developer",
+    "code"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
